@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job: one
+  explanation: MyText
+  urgent: false
+  closed: false
+
+two:
+  job: two
+  explanation: MyText
+  urgent: false
+  closed: false

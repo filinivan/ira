@@ -1,0 +1,2 @@
+class JobExecutionsController < ApplicationController
+end

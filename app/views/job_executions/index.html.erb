@@ -1,1 +1,15 @@
-<h1>Hello</h1>
+<h1 class="text-center mt-3"> Список заявок </h1>
+
+<table class='table table-striped'>
+    <tr>
+        <th>Объект</th>
+        <th>Название</th>
+        <th>Описание</th>
+        <th>Пользователь</th>
+        <th>Срочно</th>
+        <th>Действие</th>
+    </tr>
+
+    <%= render @job_executions %>
+    
+</table>

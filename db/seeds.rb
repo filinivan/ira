@@ -13,7 +13,7 @@ divisions = Division.create!([
 ])
 
 users = User.create!([
-  { fist_name: 'Маркус', last_name: 'Миллер', division_id: 1, email: 'asd@asd.rr', password: '123123', encrypted_password: '123'}
+  { first_name: 'Маркус', last_name: 'Миллер', division_id: 1, email: 'asd@asd.rr', password: '123123', encrypted_password: '123'}
 ])
 
 jobs = Job.create!([

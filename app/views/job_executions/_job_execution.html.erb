@@ -4,5 +4,6 @@
   <td><%= job_execution.explanation %></td>
   <td><%= job_execution.user.first_name  %></td>
   <td><%= job_execution.urgent ? 'Да' : 'Нет' %></td>
+  <td><%= button_to 'Выполнено', job_execution_path(job_execution) %></td>
   <td><%= button_to 'Удалить', job_execution_path(job_execution) %></td>
 </tr>

@@ -6,22 +6,25 @@ class JobExecutionsController < ApplicationController
   end
 
   def new
+    @division = Division.all
     @job_execution = JobExecution.new
-    byebug
   end
 
   def create
-    # @test = current_user.created_tests.new(test_params)
-    # if @test.save
-    #   redirect_to admin_tests_path, notice: t('.success')
-    # else 
-    #   render :new
-    # end
+    @new_job = JobExecution.new(job_execution_params)
+    if @new_job.save
+    else 
+      render :new
+    end
   end
 
   private
 
   def find_job_executions
     @job_executions = JobExecution.all
+  end
+
+  def job_execution_params
+    params.require(:job_execution).permit(:explanation, :urgent, :division_id, :user_id, :job_id )
   end
 end

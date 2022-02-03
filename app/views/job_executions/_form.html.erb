@@ -1,0 +1,27 @@
+
+
+
+<%= form_with model: [@job_execution], local: true do |f| %>
+  <%= f.label(:explanation, "Описание") %>
+  <%= f.text_area :explanation, size: "40x5" %>
+  <br>
+  <%= f.label(:urgent, "Срочно!") %>
+  <%= f.check_box :urgent,{ checked: false }, 'true', 'false' %>
+  <br>
+  <%= f.label :division %>
+        <div class="dropdown">
+  <%= f.collection_select :division_id, Division.order(:name), :id, :name,
+  class: "btn btn-secondary dropdown-toggle"%>
+        </div>
+  <br>
+  <%= f.hidden_field :user_id, value: current_user.id %>
+  <br>
+  <%= f.label :job_id %>
+        <div class="dropdown">
+  <%= f.collection_select :job_id, Job.order(:name), :id, :name, 
+  class: "btn btn-secondary dropdown-toggle"%>
+        </div>
+  
+
+  <%= f.submit class: 'btn btn-primary' %>
+<% end %>
